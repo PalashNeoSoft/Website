@@ -1,0 +1,47 @@
+﻿@using System;
+@using System.Web
+@using Microsoft.AspNetCore.Http
+
+@model List<MVC.Boilerplate.Models.Products.Product>
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 col-4 g-2">
+                <div class="card border-secondary">
+                    @*<img src="@product" class="card-img-top" alt="@product.Name">*@
+                    @*<img src="https://onemg.gumlet.io/images/f_auto,c_fit,h_150,q_auto,w_150/b3593eb5400649eea49bae16b7e99dd7/zingavita-multivitamins-for-men-with-omega-3-for-immunity-stamina-muscle-support-tablet.jpg" class="card-img-top" height="250" alt="@product.Name">*@
+                    <img src="https://m.media-amazon.com/images/I/41TOEy+lc6L.jpg" class="card-img-top" height="250" alt="@product.Name">
+                    <hr />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@product.Name</h5>
+                        <p class="card-text text-center">@product.Description</p>
+                        <p class="card-text text-center">Price: 1200</p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-success">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@*@foreach (var product in Model)
+{
+    <div class="col-md-4">
+        <div class="card">
+            <img src="@product" class="card-img-top" alt="@product.Name">
+            <div class="card-body">
+                <h5 class="card-title">@product.Name</h5>
+                <p class="card-text">@product.Description</p>
+                <p class="card-text">Price: 1200</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <a href="#" class="btn btn-success">Buy Now</a>
+            </div>
+        </div>
+    </div>
+}*@

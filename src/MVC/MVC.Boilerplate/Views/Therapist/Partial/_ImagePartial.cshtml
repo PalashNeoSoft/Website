@@ -1,0 +1,41 @@
+﻿@using System;
+@using System.Web
+@using Microsoft.AspNetCore.Http
+
+@model List<MVC.Boilerplate.Models.Images.Image>
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var image in Model)
+        {
+            <div class="col-md-4 col-4 g-2">
+                <div class="card border-secondary">
+                    <img src="@image.Path" class="card-img-top" height="250" alt="@image.Title">
+                    
+                    <div class="card-body">
+                        <p class="card-text text-end">@image.PostedDate</p>
+                        <h5 class="card-title">@image.Title</h5>
+                        <p class="card-text">@image.Description</p>                        
+                        <a href="@image.Path" class="btn btn-primary">View </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@*@foreach (var image in Model)
+{
+    <div class="col-md-4">
+        <div class="card">
+            <img src="@image.Path" class="card-img-top" alt="@image.Title">
+            <div class="card-body">
+                <h5 class="card-title">@image.Title</h5>
+                <p class="card-text">@image.Description</p>
+                <a href="@image.Path" class="btn btn-primary">View </a>
+            </div>
+        </div>
+    </div>
+}*@

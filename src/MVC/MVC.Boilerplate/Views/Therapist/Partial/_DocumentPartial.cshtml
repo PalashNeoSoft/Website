@@ -1,0 +1,47 @@
+﻿@using System;
+@using System.Web
+@using Microsoft.AspNetCore.Http
+
+@model List<MVC.Boilerplate.Models.Documents.Document>
+
+<style>
+    #doc{
+        height: 6rem !important;
+        width: 6rem !important;
+        margin: auto;
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var document in Model)
+        {
+            <div class="col-md-4 col-4 g-2 ">
+                <div class="card border-secondary">
+                    <img src="~/img/PDF.png" class="card-img-top" id="doc" alt="PDF">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@document.Title</h5>           
+                        <p class="card-text text-center">@document.Description</p>
+                        <p class="card-text text-center">@document.PostedDate</p>
+                        <a href="@document.Path" class="btn btn-primary"> Open </a> 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@*@foreach (var document in Model)
+{
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@document.Title</h5>
+                <p class="card-text">@document.Description</p>
+                <a href="@document.Path" class="btn btn-primary"> Open </a>
+            </div>
+        </div>
+    </div>
+
+}*@

@@ -1,0 +1,94 @@
+﻿@using System.Web
+@using Microsoft.AspNetCore.Http
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>MVC BOILERPLATE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/MVC.Boilerplate.styles.css" asp-append-version="true" />
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="./slick-carousel/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-carousel/slick-theme.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sticky-footer/">
+    <link href="~/css/dashboard.css" rel="stylesheet">
+    <link href="~/css/Dropdown.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap4.min.css" />
+    @*<link rel="stylesheet" href="~/lib/datatables/css/buttons.min.css" />*@
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+    
+</head>
+<body>
+   
+
+    @*@if (@ViewBag.UserName != null)
+        {*@
+    <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-10" asp-controller="Home" asp-action="Index">NeoSOFT Technology</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu" aria-expanded="false" aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        @*<input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="search" aria-label="search">
+        <div class="text-light m-lg-2 mr-1">@viewbag.username</div>
+        <div class="navbar-nav">*@
+       
+            <div class="nav-item text-nowrap">
+
+                <a class="nav-link px-3" href="@Url.Action("Index", "Therapist")">Therapists</a>
+                <a class="nav-link px-3" href="@Url.Action("CreateEvent", "Event")">Contents</a>
+                <a class="nav-link px-3" href="@Url.Action("Index", "Home")">Products</a>
+                <a class="nav-link px-3" href="@Url.Action("Index", "Home")">Pricing</a>
+                 @*<input type="text" class="search-bar" placeholder="Search.." >*@
+                <a class="nav-link px-3" href="@Url.Action("Logout", "Account")">Sign out</a>
+                @*<a class="nav-link px-3" href="@Url.Action("Login", "Account")">Login</a>*@
+            </div>
+       
+        </div>
+    </header>
+    @*}*@
+    @*<div class="container-fluid d-flex justify-content-center">
+          @RenderBody()*@
+        <div class="row">
+           
+            <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer bg-light w-100 py-3">
+        <div class="container">
+            &copy; 2022 - MVC.Boilerplate - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+    <script src="~/scripts/layout.js"></script>
+    <script src="~/scripts/delete.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="./slick-carousel/slick.min.js"></script>
+    @*<script type="text/javascript" src="./slick-carousel/slick.min.js"></script>*@
+
+<script src="~/lib/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/lib/datatables/js/jszip.min.js"></script>
+    <script src="~/lib/datatables/js/pdfmake.min.js"></script>
+    <script src="~/lib/datatables/js/vfs_fonts.min.js"></script>
+    <script src="~/lib/datatables/js/buttons.html5.min.js"></script>
+    <script src="~/lib/datatables/js/buttons.print.min.js"></script>
+    <script src="~/lib/datatables/js/buttons.colVis.min.js"></script>
+    @await Component.InvokeAsync("Notyf")   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

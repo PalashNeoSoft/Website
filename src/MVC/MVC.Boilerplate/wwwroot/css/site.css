@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    
+}
+.navbar{
+    height:70px;
+}
+
+.navbar-nav {
+    display: inline !important;
+}
+
+.nav-link {
+    display: inline;
+    margin:30px
+
+}
+.search-bar {
+    border: 1px solid gray;
+    border-radius: 15px;
+    height: 30px;
+    width: 226px;
+}
+.nav-link{
+    font-size: 16px;
+    color:white !important;
+}
+    .nav-link:hover {
+        color:black!important;
+    }
+

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<MVC.Boilerplate.Models.Therapists.Therapist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h1 style="text-align:center">Therapists</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
+        @foreach (var item in Model)
+        {
+
+            <div class="col">
+                <div class="card shadow-sm">
+
+                    <img class="img" style="margin:auto " src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" height="100" width="100">
+                    <div class="card-body">
+                        <h4 class="card-text" style="text-align:center">@item.FirstName</h4>
+                        <h6>Description:</h6>
+                        <p>
+                            Description is the pattern of narrative development that aims to make vivid a place, object,
+                            character, or group. Description is one of four rhetorical modes, along with exposition,
+                            argumentation, and narration. In practice it would be difficult to write literature that drew on
+                            just one of the four basic modes
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" style="margin:auto ">
+                                <a type="button" class="btn btn-sm btn-outline-secondary" asp-action="TherapistProfile" asp-controller="Therapist" asp-route-id="@item.ID">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+</div>
+
+<nav aria-label="Page navigation example" style="margin-left:45%">
+    <ul class="pagination mt-5">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
+
+
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePath)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "GetTherapistByID", new {  therapistId=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@

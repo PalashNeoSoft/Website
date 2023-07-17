@@ -1,0 +1,58 @@
+﻿@using System;
+@using System.Web
+@using Microsoft.AspNetCore.Http
+
+@model List<MVC.Boilerplate.Models.Videos.Video>
+@*https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4*@
+<div class="container">
+    <div class="row">
+        @foreach (var video in Model)
+        {
+            <div class="col-md-4 col-4 g-2">
+                <div class="card border-secondary">                                        
+                    <video class="video" controls preload="auto">
+                        <source src="~/videos/@video.Path" type="video/mp4">
+                    </video>
+                    <hr/>
+                    <div class="card-body">
+                        <p class="card-text text-end">@video.PostedDate</p>
+                        <h5 class="card-title">@video.Title</h5>
+                        <p class="card-text">@video.Description</p>
+                        @*<a href="@video.Path" class="btn btn-primary">Watch Video</a>*@
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+@*@foreach (var video in Model)
+{
+    <div class="card-group">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@video.Title</h5>
+                    <p class="card-text">@video.Description</p>
+                    <a href="@video.Path" class="btn btn-primary">Watch Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-2 mt-3">
+        <div class="col-md-4 col-3">
+            <div class="card">
+                <img src="@video.Path" class="card-img-top" alt="VideoImage">
+                <div class="card-body">
+                    <h5 class="card-title">@video.Title</h5>
+                    <p class="card-text">@video.Description</p>
+                    <a href="@video.Path" class="btn btn-primary">Watch Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}*@

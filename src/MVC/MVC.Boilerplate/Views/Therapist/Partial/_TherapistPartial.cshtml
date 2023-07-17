@@ -1,0 +1,58 @@
+﻿@model MVC.Boilerplate.Models.Therapists.Therapist
+
+<div>
+    <dl class="row">
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CountryID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CountryID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+    </dl>*@
+
+        <h5 class="card-title">@Model.FirstName  @Model.LastName</h5>
+        <label>Category : </label>    
+        <label>URL - </label>
+        <a href="#">Request a private Session</a>
+        <p></p>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary rounded-pill" type="button">Subscribe</button>
+        </div>
+
+        @*<div class="d-grid gap-2 col-6 mx-auto">
+            <a href="#" btn btn-primary>Request a private Session</a>
+            <a href="#" btn btn-primary>Subscribe</a>
+
+        </div>*@
+</div>
+

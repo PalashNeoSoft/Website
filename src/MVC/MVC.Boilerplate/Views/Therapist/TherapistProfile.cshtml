@@ -1,0 +1,154 @@
+﻿@model MVC.Boilerplate.Models.PartialMasterContextModel.PartialMasterContextModel
+@{
+    ViewData["Title"] = " Page";
+            //Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapistProfile</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC.Boilerplate.styles.css" asp-append-version="true" />*@
+
+    @*<link rel="stylesheet" href="~/css/Login.css" />*@
+    <style>
+        #imgicon {
+            margin: 0px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card col-md-10 offset-md-1 mt-1 mb-5 ">
+        @*<div class="mh-25 d-inline-block">
+        <img src="https://as1.ftcdn.net/v2/jpg/05/36/22/96/1000_F_536229631_kmKD3E6ffddMdXRgHGrae66JYpRM1YtD.jpg" class="card-img-top" height="200" alt="TherapistCoverPage">
+        </div>
+
+        <div class="circle circle-lg w-h-25" style="position:absolute;top:40%;">
+        <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58481.jpg" class="w-h-25" height="200" alt="THProfileImage">
+        </div>*@
+
+        @*<div>
+        <div class="mh-25 d-inline-block">
+        <img src="https://as1.ftcdn.net/v2/jpg/05/36/22/96/1000_F_536229631_kmKD3E6ffddMdXRgHGrae66JYpRM1YtD.jpg" class="card-img-top" height="200" alt="TherapistCoverPage">
+        </div>
+
+        <div class="circle circle-lg w-h-25" style="position:absolute;top:40%;">
+        <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58481.jpg" class="w-h-25" height="200" alt="THProfileImage">
+        </div>
+        </div>*@
+
+
+        <div class="mh-25 d-inline-block" style="position:relative">
+
+            <div class="circle circle-lg w-h-25" style="position:absolute;top:70%">
+                <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58481.jpg" class="w-h-25" height="200" alt="THProfileImage">
+            </div>
+
+            <img src="https://as1.ftcdn.net/v2/jpg/05/36/22/96/1000_F_536229631_kmKD3E6ffddMdXRgHGrae66JYpRM1YtD.jpg" class="card-img-top" height="400" alt="TherapistCoverPage"> 
+            @*<img src="<img src="https://as1.ftcdn.net/v2/jpg/05/36/22/96/1000_F_536229631_kmKD3E6ffddMdXRgHGrae66JYpRM1YtD.jpg" class="card-img-top" height="400" alt="TherapistCoverPage"> " class="card-img-top" height="400" alt="TherapistCoverPage">*@
+        </div>
+
+        
+        <div class="d-flex justify-content-end" id="imgicon">
+            <img src="data:image/jpeg;base64,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" class="w-h-25" width="30" height="30" alt="THProfileImage">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAdVBMVEX///8Zd/MLdPNkmfD///34/vsVdvT8//0id+smdu0AbPDQ4fhjlO8AcfKJsOvy+Pna5/fH3PGqxe4AZurn8fpomup1pOZUk+ppnedOjOkAY+AvfutBh+k1f+cAaud7qfC4zeudwOzP5feTt+wJbuXb6vMAa/T7ATPGAAADMUlEQVR4nO2a63aiMBSFQWKQ2AwVEFBbq7bD+z/iJHgpUQ6eYBJXp9mrP1w2l8+ThJyEHQReXl5eXl5eXrDIk9sh8u9RiGMj41qR1Uj8sIg+wOmnkyIro5foUS3LrJAMWtGUhRdVzjjnk4fFWV4tJAEeQJRNazahoRnRkLM61RgIGf0VM9R7S0BDtirwQyB+v9H+W/FVqhGB2nj/YchqbP9BsGCmhl8hWCDjT0g1sdB/yCPUQhBlijy0EYEwL5BLMbMwA8RSSFiG3BdKKyMgxqDE9C8eAktLAJMlagRIHNkCiGLUJHwygN0IIPr/qQD0vPlS+BFiBUB0R8WGv042b5XIPqrV+2y7BhjsRIA2s49dobRwSPoJbABQttm322ybcpHjp1eHALwszqnzGSBwCEDzvqe7OwC63QU9+5szAMqz3lTbGQCv+xNdVwA0AfJcRwC02d8OQHv8cRWBPL2peTqBuQEQ2cVzAeQSuCWYpkWaunkU8/n1ry8+qxnLpVxsRnINqNUyxsVxdiifNwswm6pDsL+cpkAK0wDdOuSwvX+WsQkQ1Px+HcNzYKrU2iAOcxYBSDxzDqBOwhhY+h7AA/xvAJ1OxDIk3TqdZQiiGIgAZxd9qQBf3/9h3NpewOv5RYduQkrIvKM98Fg2APBHKdj7sd2Y3QCA+nAUAVBv9uYACiDeAtVdAfyF7jldAeyg3MQVwOezAcDszBEAeYeqOwJI10BtMwD9183HU2Gr4LWxCUDiUxuxcu1Lvt+wkh34tuFhABpuXi7qXjyTII4u37/b3I47r0Ov0vLk/IoV2ovNAHSi8TtTMg/gATyAB/AAHuB3ACBf348FwBgIng2As3CMAkBaOEiJuHgeA4AzsQQ4G88IgKTJcC4aaWSyAUClkQkVAYyVawQAr9CGPoSZbQQA0swW4Ox8+gA6dj6EoVEbgOkYGom0dNKBS1c9ANr2r2XpJEFa55NwoFWtCNCJpqm1PecvqryBXb08uQKAS/ImX8r5p22vlsbmJexX7pyOxQY2ULDMCriT4UAMWrvVy+qhcjqWZpVgyJeufg8XG21tP3UCVkYCeHl5eXl5eXnd1T+inEXND7Xu6gAAAABJRU5ErkJggg==" class="w-h-25" width="50" height="30" alt="THProfileImage">
+            <img src="data:image/png;base64,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" class="w-h-25" width="30" height="30" alt="THProfileImage">
+
+        </div>
+
+        <div class="card-body mt-5">
+            @*<h5 class="card-title">Therapist Name</h5>
+            <label>Category : </label><p class="card-text"></p>
+            <label>URL - </label><p class="card-text"></p>
+            <a href="#">Request a private Session</a>
+
+            <p></p>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary rounded-pill" type="button">Subscribe</button>
+            </div>*@
+
+            @Html.Partial("Partial/_TherapistPartial.cshtml",Model.Therapist)
+
+            <hr>
+
+            <div class="mt-1">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item col-3" role="presentation">
+                        <button class="nav-link active my-2" id="pills-videos-tab" data-bs-toggle="pill" data-bs-target="#pills-videos" type="button" role="tab" aria-controls="pills-videos" aria-selected="true">Videos</button>
+                    </li>
+                    <li class="nav-item col-3" role="presentation">
+                        <button class="nav-link my-2" id="pills-documents-tab" data-bs-toggle="pill" data-bs-target="#pills-documents" type="button" role="tab" aria-controls="pills-documents" aria-selected="false">Documents</button>
+                    </li>
+                    <li class="nav-item col-3" role="presentation">
+                        <button class="nav-link my-2" id="pills-images-tab" data-bs-toggle="pill" data-bs-target="#pills-images" type="button" role="tab" aria-controls="pills-images" aria-selected="false">Images</button>
+                    </li>
+                    <li class="nav-item col-3" role="presentation">
+                        <button class="nav-link my-2" id="pills-products-tab" data-bs-toggle="pill" data-bs-target="#pills-products" type="button" role="tab" aria-controls="pills-products" aria-selected="false">Products</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-videos" role="tabpanel" aria-labelledby="pills-videos-tab">
+                        @Html.Partial("Partial/_VideoPartial.cshtml",Model.VideoList)
+                    </div>
+                    <div class="tab-pane fade" id="pills-documents" role="tabpanel" aria-labelledby="pills-documents-tab">
+                        @Html.Partial("Partial/_DocumentPartial.cshtml",Model.DocumentList)
+                    </div>
+                    <div class="tab-pane fade" id="pills-images" role="tabpanel" aria-labelledby="pills-images-tab">
+                        @Html.Partial("Partial/_ImagePartial.cshtml",Model.ImageList)
+                    </div>
+                    <div class="tab-pane fade" id="pills-products" role="tabpanel" aria-labelledby="pills-documents-tab">
+                        @Html.Partial("Partial/_ProductPartial.cshtml",Model.ProductList)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+@*@{
+    ViewData["Title"] = " Page";
+    //Layout = null;
+}*@
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TherapistProfile</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC.Boilerplate.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+<body>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <img src="..." class="card-img-top" alt="TherapistCoverPage">
+            <div class="card-body">
+                <h5 class="card-title">Therapist Name</h5>
+                <label>Category : </label><p class="card-text"></p>
+                <label>URL - </label><p class="card-text"></p>
+                <a href="#">Request a private Session</a>
+                <a href="#" class="btn btn-primary">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>*@
